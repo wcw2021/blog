@@ -2,26 +2,60 @@
 
 
 
-                <div class="col-sm-3 offset-sm-1 blog-sidebar">
-                    <div class="sidebar-module sidebar-module-inset">
-                        <h4>About</h4>
-                        <p><?php echo $site_description; ?></p>
-                    </div>
-                    
-                    <div class="sidebar-module">
-                        <h4>Categories</h4>
-                        <?php if($categories) : ?>
-                            <ol class="list-unstyled">
-                                <?php foreach($categories as $category) : ?>
-                                    <li><a href="posts.php?category=<?php echo urlencode($category->id); ?>">
-                                        <?php echo htmlspecialchars($category->name); ?></a>
+                <div class="col-sm-4">
+                    <div class="mx-4">
+                        <div class="sidebar-module sidebar-module-inset">
+                            <h3>About</h3>
+                            <p><?php echo $site_description; ?></p>
+                        </div>
+
+                        <div class="card p-3 my-3 bg-dark border-0">
+                            <div class="ad">
+                                <ul>
+                                    <li>A</li>
+                                    <li>N</li>
+                                    <li>N</li>
+                                    <li>O</li>
+                                    <li>I</li>
+                                    <li>N</li>
+                                    <li>G</li>
+                                    <li>&nbsp;</li>
+                                    <li>A</li>
+                                    <li>D</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card p-3 my-3 testimonial-container border-0">
+                            <blockquote class="card-body">
+                                <p class="testimonial-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident amet tenetur vel quam atque est?</p>
+                                <footer class="blockquote-footer text-white">
+                                    <small class="testimonial-user">Someone Famous in
+                                        <cite title="Source Title">Source Title</cite>
+                                    </small>
+                                </footer>
+                            </blockquote>
+                        </div>
+
+                        <div class="sidebar-module">
+                            <h3>Categories</h3>
+                            <?php if($categories) : ?>
+                                <ol class="list-unstyled">
+                                    <li>
+                                        <a href="posts.php">All</a>
                                     </li>
-                                <?php endforeach; ?>
-                            </ol>
-                        <?php else : ?>
-                            <p>There are no categories yet</p>
-                        <?php endif; ?>
+                                    <?php foreach($categories as $category) : ?>
+                                        <li><a href="posts.php?category=<?php echo urlencode($category->id); ?>">
+                                            <?php echo htmlspecialchars($category->name); ?></a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ol>
+                            <?php else : ?>
+                                <p>There are no categories yet</p>
+                            <?php endif; ?>
+                        </div>
                     </div>
+
                 </div><!-- /.blog-sidebar -->
 
             </div> <!-- end of row --> 
@@ -46,7 +80,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="js/testimonial.js"></script>
 </body>
 
 </html>

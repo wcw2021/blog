@@ -43,6 +43,7 @@
             $loggedInUser = $userdb->login($data['name'], $data['password']);
 
             if($loggedInUser){
+                session_regenerate_id();
                 $_SESSION['user_id'] = $loggedInUser->id;
                 $_SESSION['user_name'] = $loggedInUser->name;
                 header("Location: index.php");

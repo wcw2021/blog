@@ -18,6 +18,7 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/advertise.css">
 
     <title>Blog</title>
 </head> 
@@ -28,7 +29,7 @@
       <div class="container">
         <nav class="blog-nav">
           <a class="blog-nav-item <?= ($activepage == 'index') ? 'active' : ''; ?>" href="index.php">Home</a>
-          <a class="blog-nav-item <?= ($activepage == 'posts') ? 'active' : ''; ?>" href="posts.php">All Posts</a>
+          <!-- <a class="blog-nav-item <?php //echo ($activepage == 'posts') ? 'active' : ''; ?>" href="posts.php">All Posts</a> -->
           <a class="blog-nav-item float-right" href="admin/login.php">Admin</a>
         </nav>
 
