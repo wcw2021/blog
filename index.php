@@ -17,7 +17,7 @@
 		<div class="blog-post">
             <h2 class="blog-post-title"><?php echo htmlspecialchars($post->title); ?></h2>
             <p class="blog-post-meta">
-                <?php echo formatDate($post->date); ?> by <a href="#"><?php echo htmlspecialchars($post->author); ?></a>
+                <?php echo formatDate($post->date); ?> by <?php echo htmlspecialchars($post->author); ?>
             </p>
 			<p>
                 <?php echo htmlspecialchars(shortenText($post->body)); ?>
